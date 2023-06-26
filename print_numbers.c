@@ -55,7 +55,7 @@ int print_number(int num)
 		{
 			arr[i] = '0' + (absNum % 10);
 			absNum = absNum / 10;
-			i++
+			i++;
 		}
 
 		/* Write digits to stdout */
