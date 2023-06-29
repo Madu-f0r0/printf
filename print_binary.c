@@ -29,6 +29,7 @@ int binary(unsigned int num)
 	}
 	arr[i] = '\0';
 	digits = i;
+	i--;
 
 	while (i >= 0)
 	{
