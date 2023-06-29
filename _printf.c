@@ -15,6 +15,7 @@ int _printf(const char *format, ...)
 {
 	int i, caseReturn, elementCount = 0;
 	int nbuff;
+	unsigned int bbuff;
 	char cbuff;
 	char *sbuff;
 	va_list elements;
@@ -57,6 +58,13 @@ int _printf(const char *format, ...)
 					caseReturn = print_number(nbuff);
 					elementCount += caseReturn;
 					break;
+				case 'b':
+					bbuff = va_arg(elements, unsigned int);
+					caseReturn = binary(bbuff);
+					elementCount += caseReturn;
+					break;
+				case '\0':
+					return (-1);
 				default:
 					write(1, &format[i - 1], 1);
 					write(1, &format[i], 1);

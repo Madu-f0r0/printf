@@ -1,6 +1,7 @@
 #include "main.h"
 #include <stdlib.h>
 #include <unistd.h>
+#include <stdio.h>
 
 int print_number(int num);
 
@@ -14,7 +15,7 @@ int print_number(int num);
 int print_number(int num)
 {
 	int digitCount = 0, i = 0;
-	int absNum, dupAbsNum, negSign = 0;
+	unsigned int absNum, dupAbsNum, negSign = 0;
 	char *arr;
 
 	if (num == 0)
@@ -35,6 +36,7 @@ int print_number(int num)
 		{
 			absNum = num;
 		}
+
 		/* Calculate no of digits the number has */
 		dupAbsNum = absNum;
 		while (dupAbsNum != 0)
