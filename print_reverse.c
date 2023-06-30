@@ -27,7 +27,7 @@ if (ch == NULL)
 return (0);
 for (len = i - 1; len >= 0; len--)
 {
-ch[i - 1 - len] = str[i];
+ch[i - 1 - len] = str[len];
 }
 ch[i] = '\0';
 write(1, ch, i);
