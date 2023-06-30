@@ -20,7 +20,7 @@ char cbuff;
 char *sbuff;
 char *spbuff;
 va_list elements;
-
+char *revbuff;
 va_start(elements, format);
 
 if (format == NULL)
@@ -67,6 +67,11 @@ break;
 case 'S':
 spbuff = va_arg(elements, char *);
 caseReturn = print_custom_string(spbuff);
+elementCount += caseReturn;
+break;
+case 'r':
+revbuff = va_arg(elements, char *);
+caseReturn = print_reverse(revbuff);
 elementCount += caseReturn;
 break;
 case '\0':

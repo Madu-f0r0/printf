@@ -3,10 +3,10 @@
 #include <stdlib.h>
 
 /**
- * print_reverse - A function that prints a string in reverse.
- * @str: string of characters
- * Return: characters printed.
- */
+* print_reverse - A function that prints a string in reverse.
+* @str: string of characters
+* Return: characters printed.
+*/
 
 
 int print_reverse(char *str)
@@ -21,7 +21,9 @@ count = 6;
 else
 {
 for (i = 0; str[i] != '\0'; i++)
+{
 count++;
+}
 ch = malloc((sizeof(char) * i + 1));
 if (ch == NULL)
 return (0);
