@@ -33,7 +33,7 @@ int binary(unsigned int num)
 
 	while (i >= 0)
 	{
-		write(1, &(arr[i]), 1);
+		write(1, &arr[i], 1);
 		i--;
 	}
 	return (digits);
