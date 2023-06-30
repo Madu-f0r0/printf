@@ -25,12 +25,13 @@ unsigned char ch = (unsigned char)str[i];
 hex[2] = "0123456789ABCDEF"[ch / 16];
 hex[3] = "0123456789ABCDEF"[ch % 16];
 write(1, hex, 4);
+count = count + 4;
 }
 else
 {
 write(1, &str[i], 1);
-}
 count++;
+}
 }
 return (count);
 }
