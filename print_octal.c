@@ -14,6 +14,11 @@ int print_octal(unsigned int num)
 	int i = 0, digits = 0;
 	char arr[1024];
 
+	if (num == 0)
+	{
+		return (write(1, "0", 1));
+	}
+
 	while (num > 0)
 	{
 		arr[i] = '0' + (num % 8);
